@@ -35,7 +35,7 @@ const questions = [
 ];
 
 let questionIndex = 0;
-let timer = 10; /*10 * questions.length;*/
+let timer = 10 * questions.length;
 
 const startButton = document.getElementById("start-quiz-button");
 const main = document.getElementById("main");
@@ -49,32 +49,6 @@ if (!arrayFromLS) {
 }
 
 //function to record click on available options.
-
-const selectAnswer = (event) => {
-  //check if answer is selected from one of the options
-  const target = event.target;
-
-  if (target.tagName === "LI") {
-    const userAnswer = target.getAttribute("data-value");
-
-    compareResults(userAnswer);
-  }
-
-  const deleteSection = document.getElementById("question-container");
-  deleteSection.remove();
-
-  if (questionIndex < questions.length - 1 && timer > 0) {
-    questionIndex += 1;
-    renderQuestion();
-  } else if (questionIndex === questions.length - 1 && timer >= 0) {
-    console.log("hi");
-    renderForm();
-  } else if (timer == 0) {
-    console.log("kk");
-    // render game over
-    gameOver();
-  }
-};
 
 //Game Over
 const gameOver = () => {
@@ -96,21 +70,6 @@ const storeInLS = (key, value) => {
   }
   arrayFromLS.push(value);
   localStorage.setItem(key, JSON.stringify(arrayFromLS));
-};
-
-const compareResults = (userAnswer) => {
-  //get user answers
-
-  //check if user's answer matches the correct answer
-
-  if (userAnswer !== questions[questionIndex].correctAnswer) {
-    timer -= 5;
-    if (timer < 0) {
-      timerSpan.textContent = 0;
-    } else {
-      timerSpan.textContent = timer;
-    }
-  }
 };
 
 const displayResults = (event) => {
@@ -196,6 +155,47 @@ const renderForm = () => {
   main.append(section);
 
   form.addEventListener("submit", displayResults);
+};
+
+const compareResults = (userAnswer) => {
+  //get user answers
+
+  //check if user's answer matches the correct answer
+
+  if (userAnswer !== questions[questionIndex].correctAnswer) {
+    timer -= 5;
+    if (timer < 0) {
+      timerSpan.textContent = 0;
+    } else {
+      timerSpan.textContent = timer;
+    }
+  }
+};
+
+const selectAnswer = (event) => {
+  //check if answer is selected from one of the options
+  const target = event.target;
+
+  if (target.tagName === "LI") {
+    const userAnswer = target.getAttribute("data-value");
+
+    compareResults(userAnswer);
+  }
+
+  const deleteSection = document.getElementById("question-container");
+  deleteSection.remove();
+
+  if (questionIndex < questions.length - 1 && timer > 0) {
+    questionIndex += 1;
+    renderQuestion();
+  } else if (questionIndex === questions.length - 1 && timer >= 0) {
+    console.log("hi");
+    renderForm();
+  } else if (timer == 0) {
+    console.log("kk");
+    // render game over
+    gameOver();
+  }
 };
 
 //Function to render questions
