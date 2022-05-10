@@ -42,6 +42,77 @@ const main = document.getElementById("main");
 const timerSpan = document.getElementById("timer-span");
 const formElement = document.getElementById("submit-score-button");
 
+let arrayFromLS = JSON.parse(localStorage.getItem("feedbackResults"));
+
+if (!arrayFromLS) {
+  localStorage.setItem("feedbackResults", JSON.stringify([]));
+}
+
+//function to record click on available options.
+
+const selectAnswer = (event) => {
+  //check if answer is selected from one of the options
+  const target = event.target;
+
+  if (target.tagName === "LI") {
+    const userAnswer = target.getAttribute("data-value");
+
+    compareResults(userAnswer);
+  }
+
+  const deleteSection = document.getElementById("question-container");
+  deleteSection.remove();
+
+  if (questionIndex < questions.length - 1 && timer > 0) {
+    questionIndex += 1;
+    renderQuestion();
+  } else if (questionIndex === questions.length - 1 && timer >= 0) {
+    console.log("hi");
+    renderForm();
+  } else if (timer == 0) {
+    console.log("kk");
+    // render game over
+    gameOver();
+  }
+};
+
+//Game Over
+const gameOver = () => {
+  section = document.createElement("section");
+
+  h2 = document.createElement("h2");
+  h2.setAttribute("class", "high-scores-value");
+  h2.textContent = "Game Over!";
+
+  section.append(h2);
+  main.append(section);
+};
+//Remove current Question
+
+//Store values in LS
+const storeInLS = (key, value) => {
+  if (!arrayFromLS) {
+    arrayFromLS = [];
+  }
+  arrayFromLS.push(value);
+  localStorage.setItem(key, JSON.stringify(arrayFromLS));
+};
+
+const compareResults = (userAnswer) => {
+  //get user answers
+
+  //check if user's answer matches the correct answer
+
+  if (userAnswer !== questions[questionIndex].correctAnswer) {
+    timer -= 5;
+    if (timer < 0) {
+      timerSpan.textContent = 0;
+    } else {
+      timerSpan.textContent = timer;
+    }
+  }
+};
+
 const displayResults = (event) => {
   event.preventDefault();
   //get initials from form
