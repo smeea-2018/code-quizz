@@ -38,7 +38,7 @@ HTML, CSS, JavaScript
 
 Following link provides the preview of the website before changing the code.
 
-![The code-quiz webpage includes a  header with home and high scores links , a description of code-quiz with start button and footer at the bottom of the page.](./assets/images/codequizquestionspage.JPG)
+![The code-quiz webpage includes a  header with home and high scores links , a description of code-quiz with start button and footer at the bottom of the page.](./assets/images/codequizstartpage.JPG)
 
 The link below is the preview of the modified website.
 
