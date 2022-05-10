@@ -1,6 +1,3 @@
-let questionIndex = 0;
-let timer = 10; /*10 * questions.length;*/
-
 const questions = [
   {
     text: "Which of the following keywords is used to define a variable in Javascript?",
@@ -37,7 +34,12 @@ const questions = [
   },
 ];
 
+let questionIndex = 0;
+let timer = 10; /*10 * questions.length;*/
+
 const startButton = document.getElementById("start-quiz-button");
 const main = document.getElementById("main");
 const timerSpan = document.getElementById("timer-span");
 const formElement = document.getElementById("submit-score-button");
+
+startButton.addEventListener("click", startQuiz);
