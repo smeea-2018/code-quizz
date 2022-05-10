@@ -42,6 +42,50 @@ const main = document.getElementById("main");
 const timerSpan = document.getElementById("timer-span");
 const formElement = document.getElementById("submit-score-button");
 
+const displayResults = (event) => {
+  event.preventDefault();
+  //get initials from form
+  const initials = document.getElementById("name-initials").value;
+  if (initials) {
+    const yourScore = {
+      initials,
+      score: timer,
+    };
+    storeInLS("feedbackResults", yourScore);
+  } else {
+    alert("Please enter your initials");
+  }
+};
+//Timer Function called
+const setTimer = () => {
+  const updateTimerValue = () => {
+    //start timer and decrement by 1
+
+    timer -= 1;
+
+    //set text
+    timerSpan.textContent = timer;
+
+    // check if timer is equal to 0
+    if (timer <= 0) {
+      clearInterval(timerId);
+
+      //Delete Timer
+      const removeTimer = document.getElementById("timer-section");
+      removeTimer.remove();
+      //Delete question
+      const deleteSection = document.getElementById("question-container");
+
+      if (deleteSection) {
+        deleteSection.remove();
+      }
+    } else if (questionIndex === questions.length - 1) {
+      clearInterval(timerId);
+    }
+  };
+  const timerId = setInterval(updateTimerValue, 1000);
+};
+
 //Render form
 const renderForm = () => {
   document.getElementById("timer-section").remove();
