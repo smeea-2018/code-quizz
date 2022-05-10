@@ -36,13 +36,11 @@ HTML, CSS, JavaScript
 
 ## Mock-Up
 
-Following link provides the preview of the website before changing the code.
+Following link provides the preview of the website.
 
 ![The code-quiz webpage includes a  header with home and high scores links , a description of code-quiz with start button and footer at the bottom of the page.](./assets/images/codequizstartpage.JPG)
 
-The link below is the preview of the modified website.
-
-![The code-quiz webpage includes a  header with home and high scores links , a question with multiple answer and footer at the bottom of the page.](./assets/images/codequizquestionspage.JPGG)
+![The code-quiz webpage includes a  header with home and high scores links , a question with multiple answer and footer at the bottom of the page.](./assets/images/codequizquestionspage.JPG)
 
 ![The  responsive code-quiz webpage showing high scores .](./assets/images/highscores.JPG)
 
