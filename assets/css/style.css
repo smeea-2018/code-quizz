@@ -36,7 +36,8 @@ a:link {
   text-decoration: none;
 }
 /* Styles for header section end here */
-* Styles for main section start here */ .main-class {
+/* Styles for main section start here */
+.main-class {
   flex: 2;
 }
 
@@ -100,6 +101,13 @@ a:link {
   color: black;
 }
 
+/* Game Over section */
+.game-over-section {
+  padding: 10px;
+  text-align: center;
+  height: 30rem;
+}
+
 /* Answer options provided as list */
 .highScore-list-item,
 .list-item {
@@ -161,7 +169,7 @@ a:link {
 .footer-container {
   display: flex;
   flex-direction: row;
-  border: 2px solid white;
+  border: 2px solid black;
 
   justify-content: space-between;
   background-color: darkcyan;
@@ -197,6 +205,12 @@ a:link {
   /* Style applied to footer links */
   .contact-item {
     margin: 10px;
+  }
+
+  .game-over-section {
+    padding: 10px;
+    text-align: center;
+    height: 30rem;
   }
 
   /* High score page styles  */

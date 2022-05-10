@@ -35,7 +35,7 @@ const questions = [
 ];
 
 let questionIndex = 0;
-let timer = 10 * questions.length;
+let timer = 10; /* questions.length;*/
 
 const startButton = document.getElementById("start-quiz-button");
 const main = document.getElementById("main");
@@ -52,7 +52,7 @@ if (!arrayFromLS) {
 
 //Game Over
 const gameOver = () => {
-  section = document.createElement("section");
+  section = document.createElement("game-over-section");
 
   h2 = document.createElement("h2");
   h2.setAttribute("class", "high-scores-value");
@@ -103,6 +103,7 @@ const setTimer = () => {
       //Delete Timer
       const removeTimer = document.getElementById("timer-section");
       removeTimer.remove();
+      gameOver();
       //Delete question
       const deleteSection = document.getElementById("question-container");
 
@@ -189,7 +190,6 @@ const selectAnswer = (event) => {
     questionIndex += 1;
     renderQuestion();
   } else if (questionIndex === questions.length - 1 && timer >= 0) {
-    console.log("hi");
     renderForm();
   } else if (timer == 0) {
     console.log("kk");
