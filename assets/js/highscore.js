@@ -31,8 +31,10 @@ const sortHighScores = (highScore) => {
 
 const onLoad = () => {
   const highScore = JSON.parse(localStorage.getItem("feedbackResults"));
-  if (!highScore) {
-    alert("No value found. Please select Home to play");
+  if (highScore == "") {
+    alert(
+      "Welcome!. You are the first one to take quiz. Please select Home to take quiz."
+    );
   } else {
     //sort array in descending order
     const finalHighScore = sortHighScores(highScore);

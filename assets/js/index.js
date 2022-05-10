@@ -35,7 +35,7 @@ const questions = [
 ];
 
 let questionIndex = 0;
-let timer = 10; /* questions.length;*/
+let timer = 10 * questions.length;
 
 const startButton = document.getElementById("start-quiz-button");
 const main = document.getElementById("main");
@@ -58,7 +58,11 @@ const gameOver = () => {
   h2.setAttribute("class", "high-scores-value");
   h2.textContent = "Game Over!";
 
-  section.append(h2);
+  h3 = document.createElement("h3");
+  h3.setAttribute("class", "game-over-message");
+  h3.textContent = "Please select home  to retake  quiz";
+
+  section.append(h2, h3);
   main.append(section);
 };
 //Remove current Question
@@ -192,7 +196,6 @@ const selectAnswer = (event) => {
   } else if (questionIndex === questions.length - 1 && timer >= 0) {
     renderForm();
   } else if (timer == 0) {
-    console.log("kk");
     // render game over
     gameOver();
   }
