@@ -181,3 +181,27 @@ a:link {
 .high-score-section {
   margin-top: 20px;
 }
+@media (max-width: 700px) {
+  .nav-container,
+  .footer-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Style applied to header list item */
+  .nav-container li {
+    margin: 10px;
+  }
+
+  /* Style applied to footer links */
+  .contact-item {
+    margin: 10px;
+  }
+
+  /* High score page styles  */
+  .high-score-section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
