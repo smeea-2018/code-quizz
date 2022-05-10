@@ -35,7 +35,7 @@ const questions = [
 ];
 
 let questionIndex = 0;
-let timer = 10 * questions.length;
+let timer = 100 * questions.length;
 
 const startButton = document.getElementById("start-quiz-button");
 const main = document.getElementById("main");
@@ -79,13 +79,14 @@ const storeInLS = (key, value) => {
 const displayResults = (event) => {
   event.preventDefault();
   //get initials from form
-  const initials = document.getElementById("name-initials").value;
+  const initials = document.getElementById("name-initials");
   if (initials) {
     const yourScore = {
-      initials,
+      initials: initials.value,
       score: timer,
     };
     storeInLS("feedbackResults", yourScore);
+    initials.value = "";
   } else {
     alert("Please enter your initials");
   }
@@ -114,8 +115,6 @@ const setTimer = () => {
       if (deleteSection) {
         deleteSection.remove();
       }
-    } else if (questionIndex === questions.length - 1) {
-      clearInterval(timerId);
     }
   };
   const timerId = setInterval(updateTimerValue, 1000);

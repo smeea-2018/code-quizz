@@ -56,7 +56,7 @@ a:link {
   border: 5px solid burlywood;
   margin-bottom: 10px;
   background-color: f95738;
-  width: 100%;
+  /* width: 100%; */
   height: 30rem;
   color: white;
 }
@@ -82,8 +82,7 @@ a:link {
 
 .high-score-section,
 .form-container,
-.question-section,
-.start-quiz-section {
+.question-section {
   padding: 10px;
   border: 5px solid burlywood;
   margin-bottom: 5px;
@@ -113,8 +112,14 @@ a:link {
 .list-item {
   padding: 5px;
   background-color: ce4257;
-  margin: 20px;
+  margin: 20px auto;
+  width: 80%;
   list-style-type: none;
+}
+
+.unordered-list {
+  margin: 0;
+  padding: 0;
 }
 
 /* Styles to change color list-item  */
