@@ -1,6 +1,6 @@
 # code-quiz-homework# Web APIs: Code Quiz
 
-## Link to deploy website [here]()
+## Link to deploy website [here](https://smeea-2018.github.io/code-quiz-homework/)
 
 ## Task
 
