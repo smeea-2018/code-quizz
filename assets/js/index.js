@@ -33,3 +33,8 @@ const questions = [
     correctAnswer: "  if(x == 2)",
   },
 ];
+
+const startButton = document.getElementById("start-quiz-button");
+const main = document.getElementById("main");
+const timerSpan = document.getElementById("timer-span");
+const formElement = document.getElementById("submit-score-button");
