@@ -42,6 +42,47 @@ const main = document.getElementById("main");
 const timerSpan = document.getElementById("timer-span");
 const formElement = document.getElementById("submit-score-button");
 
+//Render form
+const renderForm = () => {
+  document.getElementById("timer-section").remove();
+  section = document.createElement("section");
+  section.setAttribute("class", "form-container");
+
+  h6 = document.createElement("h6");
+  h6.setAttribute("class", "timer-score-value");
+  h6.textContent = `your score is ${timer}`;
+
+  const form = document.createElement("form");
+  form.setAttribute("id", "user-score-form");
+
+  const nameInputDiv = document.createElement("div");
+  nameInputDiv.setAttribute("class", "initials-div");
+
+  const textBox = document.createElement("input");
+  textBox.setAttribute("type", "text");
+  textBox.setAttribute("placeholder", "Enter Initials");
+  textBox.setAttribute("id", "name-initials");
+  textBox.setAttribute("class", "name-input");
+  nameInputDiv.append(textBox);
+
+  const buttonDiv = document.createElement("div");
+  buttonDiv.setAttribute("class", "button-input");
+  const button = document.createElement("button");
+  button.setAttribute("type", "submit");
+  button.setAttribute("class", "submit-button");
+  button.setAttribute("class", "submit-score-button");
+  button.textContent = "Submit";
+  buttonDiv.append(button);
+
+  form.append(nameInputDiv, buttonDiv);
+
+  section.append(h6, form);
+
+  main.append(section);
+
+  form.addEventListener("submit", displayResults);
+};
+
 //Function to render questions
 const renderQuestion = () => {
   //Render the first question
