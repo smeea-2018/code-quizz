@@ -1,3 +1,6 @@
+let questionIndex = 0;
+let timer = 10; /*10 * questions.length;*/
+
 const questions = [
   {
     text: "Which of the following keywords is used to define a variable in Javascript?",
