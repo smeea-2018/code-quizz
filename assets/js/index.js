@@ -42,4 +42,14 @@ const main = document.getElementById("main");
 const timerSpan = document.getElementById("timer-span");
 const formElement = document.getElementById("submit-score-button");
 
+const startQuiz = () => {
+  //Remove start quiz section
+  const sectionStart = document.getElementById("start-quiz-id");
+  sectionStart.remove();
+
+  renderQuestion();
+  setTimer();
+  timerSpan.textContent = timer;
+};
+
 startButton.addEventListener("click", startQuiz);
