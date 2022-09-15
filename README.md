@@ -56,7 +56,9 @@ Following link provides the preview of the website.
 
 ## How to run and install the project
 
-To run the project visual studio code, a web browser and git hub account is required. The code can be cloned by using git bash or github desktop.
+To run the project visual studio code, a web browser and git hub account is required. The code can be cloned by using git bash or github desktop. To clone code via git bash:
+
+open git bash and navigate to folder where you want to
 
 ## Contact Information:
 
