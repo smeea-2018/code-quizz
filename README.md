@@ -4,12 +4,18 @@
 
 ## Task
 
-The Challenge is to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. It will have a clean, polished, and responsive user interface.
+The app is to builds a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code . It will have a clean, polished, and responsive user interface.
+
+## Description
+
+The app creates a time-bound coding quiz with a set of multiple-choice question, high score board , focused DOM manipulation by using JavaScript to create a new section and remove current section from DOM and saving and retrieving score from local storage.
+
+The code quiz-app allows you to take quiz. The app functions on any device either it is laptop or mobile. It features time-bound quiz with multiple choice questions, keeps track of your score you can compare your progress with peers, and socreboard.
 
 ## User Story
 
 ```
-AS A coding boot camp student
+AS A user
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 ```
@@ -32,7 +38,11 @@ THEN I can save my initials and my score
 
 ## Technologies
 
-HTML, CSS, JavaScript
+HTML to develop page structure
+CSS to style the page
+JavaScript to add functionality, dynamic behavior to the page and DOM manipulation.
+DOM to create and remove a section
+Local Storage to store the score
 
 ## Mock-Up
 
