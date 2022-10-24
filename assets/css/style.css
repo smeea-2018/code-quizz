@@ -1,5 +1,5 @@
 body {
-  background-color: ee9b00;
+  /* background-color: ee9b00; */
   height: 100%;
   margin-top: 10px;
   padding: 0;
@@ -11,10 +11,10 @@ body {
 .header {
   padding: 10px;
   margin: 30 px;
-  background-color: darkcyan;
+  background-color: rgba(208, 9, 9, 0.753);
   height: 80px;
-  border: 2px solid black;
-  box-shadow: 10px 12px;
+  /* border: 2px solid black; */
+  box-shadow: 8px 8px rgb(150, 148, 147);
 }
 
 /* Nav styles applied  */
@@ -30,7 +30,7 @@ body {
 }
 /* Link text color changed to white */
 .nav-item {
-  color: white;
+  color: black;
 }
 a:link {
   text-decoration: none;
@@ -45,25 +45,36 @@ a:link {
 .timer-text {
   margin: 10px;
   font-weight: bold;
-  color: white;
+  color: black;
 }
-
+.presentation-box {
+  /* background-color: aqua; */
+  width: 30%;
+  height: 60%;
+  padding: 50px;
+  /* border: 1px solid red; */
+  position: relative;
+  top: 20%;
+  left: 30%;
+  background-color: aliceblue;
+}
 /* section containing information about quiz and start button */
 .high-score-section,
 .start-quiz-section {
-  padding-top: 30px;
+  /* padding-top: 30px; */
+  margin-top: 10px;
   text-align: center;
-  border: 5px solid burlywood;
+  /* border: 5px solid burlywood; */
   margin-bottom: 10px;
-  background-color: f95738;
+  background-color: white;
   /* width: 100%; */
   height: 30rem;
-  color: white;
+  color: black;
 }
 
-/*.main-heading {
+/* .main-heading {
   color: black;
-}*/
+} */
 /* Button to start the quiz */
 
 .button {
@@ -84,12 +95,12 @@ a:link {
 .form-container,
 .question-section {
   padding: 10px;
-  border: 5px solid burlywood;
+  /* border: 5px solid burlywood; */
   margin-bottom: 5px;
-  background-color: f95738;
+  /* background-color: f95738; */
   width: 100%;
   height: 30rem;
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -111,7 +122,7 @@ a:link {
 .highScore-list-item,
 .list-item {
   padding: 5px;
-  background-color: ce4257;
+  /* background-color: ce4257; */
   margin: 20px auto;
   width: 80%;
   list-style-type: none;
@@ -179,10 +190,10 @@ a:link {
 .footer-container {
   display: flex;
   flex-direction: row;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 
-  justify-content: space-between;
-  background-color: darkcyan;
+  justify-content: center;
+  background-color: white;
 
   height: 80px;
   margin-bottom: 10px;
@@ -192,7 +203,7 @@ a:link {
 }
 
 .footer-link-item {
-  color: white;
+  color: black;
 }
 
 /*Styles for highscore section margin-top*/

@@ -212,6 +212,8 @@ const renderQuestion = () => {
   section.setAttribute("id", "question-container");
   //section.setAttribute("data-correct-answer", "Both var and let");
 
+  const div = document.createElement("div");
+  div.setAttribute("class", "presentation-box");
   const h2 = document.createElement("h2");
   h2.setAttribute("class", "subtitle");
   h2.textContent = currentQuestion.text;
@@ -226,7 +228,8 @@ const renderQuestion = () => {
     ul.appendChild(li);
   } //end for
 
-  section.append(h2, ul);
+  div.append(h2, ul);
+  section.append(div);
   main.append(section);
   section.addEventListener("click", selectAnswer);
 };
