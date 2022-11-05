@@ -48,11 +48,7 @@ Local Storage to store the score
 
 Following link provides the preview of the website.
 
-![The code-quiz webpage includes a  header with home and high scores links , a description of code-quiz with start button and footer at the bottom of the page.](./assets/images/codequizstartpage.JPG)
-
-![The code-quiz webpage includes a  header with home and high scores links , a question with multiple answer and footer at the bottom of the page.](./assets/images/codequizquestionspage.JPG)
-
-![The  responsive code-quiz webpage showing high scores .](./assets/images/highscores.JPG)
+![The code-quiz webpage includes a  header with home and high scores links , a description of code-quiz with start button and footer at the bottom of the page.](./assets/images/Quiz.JPG)
 
 ## How to run and install the project
 
