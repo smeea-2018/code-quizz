@@ -1,0 +1,242 @@
+body {
+  /* background-color: ee9b00; */
+  height: 100%;
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles on index.html and question.html */
+.header {
+  padding: 10px;
+  margin: 30 px;
+  background-color: rgba(208, 9, 9, 0.753);
+  height: 80px;
+  /* border: 2px solid black; */
+  box-shadow: 8px 8px rgb(150, 148, 147);
+}
+
+/* Nav styles applied  */
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* navbar list item styles */
+.nav-container li {
+  list-style: none;
+}
+/* Link text color changed to white */
+.nav-item {
+  color: black;
+}
+a:link {
+  text-decoration: none;
+}
+/* Styles for header section end here */
+/* Styles for main section start here */
+.main-class {
+  flex: 2;
+}
+
+/* Timer text on landing page */
+.timer-text {
+  margin: 10px;
+  font-weight: bold;
+  color: black;
+}
+.presentation-box {
+  /* background-color: aqua; */
+  width: 30%;
+  height: 60%;
+  padding: 50px;
+  /* border: 1px solid red; */
+  position: relative;
+  top: 20%;
+  left: 30%;
+  background-color: aliceblue;
+}
+/* section containing information about quiz and start button */
+.high-score-section,
+.start-quiz-section {
+  /* padding-top: 30px; */
+  margin-top: 10px;
+  text-align: center;
+  /* border: 5px solid burlywood; */
+  margin-bottom: 10px;
+  background-color: white;
+  /* width: 100%; */
+  height: 30rem;
+  color: black;
+}
+
+/* .main-heading {
+  color: black;
+} */
+/* Button to start the quiz */
+
+.button {
+  margin: 30px;
+  border: 3px solid burlywood;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px black;
+}
+
+.button:hover {
+  background-color: e63946;
+}
+
+/* Styles for start Quiz button end here */
+/* questions rendered when start button clicked  and form presented when all questions answered*/
+
+.high-score-section,
+.form-container,
+.question-section {
+  padding: 10px;
+  /* border: 5px solid burlywood; */
+  margin-bottom: 5px;
+  /* background-color: f95738; */
+  width: 100%;
+  height: 30rem;
+  color: black;
+  text-align: center;
+}
+
+/* Question rendered as h2 */
+.subtitle {
+  margin: 20px;
+  padding: 10px;
+  color: black;
+}
+
+/* Game Over section */
+.game-over-section {
+  padding: 10px;
+  text-align: center;
+  height: 30rem;
+}
+
+/* Answer options provided as list */
+.highScore-list-item,
+.list-item {
+  padding: 5px;
+  /* background-color: ce4257; */
+  margin: 20px auto;
+  width: 80%;
+  list-style-type: none;
+}
+
+.unordered-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles to change color list-item  */
+.list-item:hover {
+  background-color: ff0054;
+}
+
+/* form rendered when all questions are answered */
+.form-container {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Value of the timer when all questions answered */
+.high-scores-value,
+.timer-score-value {
+  color: 4f000b;
+  font-size: larger;
+  text-align: center;
+}
+.game-over-message {
+  color: 4f000b;
+  font-size: medium;
+  text-align: center;
+}
+
+/* text box to get initials */
+
+.name-input {
+  margin-bottom: 20px;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+/* Submit button to enter initials and  value in Local Storage */
+.submit-score-button {
+  margin: 20px 10px 10px 10px;
+  background-color: grey;
+  border-radius: 10px;
+  border: 2px dotted black;
+  color: white;
+  box-shadow: 0px 0px 2px 2px black;
+  padding: 5px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.submit-score-button:hover {
+  background-color: purple;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+/* Styles for main section end here */
+
+/* Styles for footer section */
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid black; */
+
+  justify-content: center;
+  background-color: white;
+
+  height: 80px;
+  margin-bottom: 10px;
+}
+.contact-item {
+  margin: 20px;
+}
+
+.footer-link-item {
+  color: black;
+}
+
+/*Styles for highscore section margin-top*/
+.high-score-section {
+  margin-top: 20px;
+}
+@media (max-width: 700px) {
+  .nav-container,
+  .footer-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Style applied to header list item */
+  .nav-container li {
+    margin: 10px;
+  }
+
+  /* Style applied to footer links */
+  .contact-item {
+    margin: 10px;
+  }
+
+  .game-over-section {
+    padding: 10px;
+    text-align: center;
+    height: 30rem;
+  }
+
+  /* High score page styles  */
+  .high-score-section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
